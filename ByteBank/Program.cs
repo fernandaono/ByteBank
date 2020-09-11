@@ -12,16 +12,18 @@ namespace ByteBank
 		static void Main(string[] args)
 		{
 
-			Funcionario carlos = new Funcionario();
+			Funcionario carlos = new Funcionario("546.879.157-20");
 
 			carlos.Nome = "Carlos";
-			carlos.CPF = "546.879.157-20";
 			carlos.Salario = 2000;
 
-			Diretor roberta = new Diretor();
+			Console.WriteLine(Funcionario.TotalDeFuncionarios);
+
+			Diretor roberta = new Diretor("562.764.982-63");
 			roberta.Nome = "Roberta";
-			roberta.CPF = "562.764.982-63";
 			roberta.Salario = 5000;
+
+			Console.WriteLine(Funcionario.TotalDeFuncionarios);
 
 			Funcionario robertaTeste = roberta;
 
