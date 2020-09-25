@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ByteBank.Sistemas;
 
 namespace ByteBank.Funcionarios
 {
-	public class GerenteDeConta : Funcionario
+	public class GerenteDeConta : Autenticavel
 	{
-		public string Senha { get; set; }
 		public GerenteDeConta(string cpf) : base(4000, cpf)
 		{
 
 		}
-		public bool Autenticar(string senha)
-		{
-			return Senha == senha;
-		}
+		
 		public override void AumentarSalario()
 		{
 			Salario *= 1.05;
